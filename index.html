@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evan Albury | Mechanical Engineer</title>
   <style>
     body {
@@ -12,35 +12,47 @@
       background-color: #f8f9fa;
       color: #333;
     }
-    header {
+    header, footer {
       background-color: #1f2937;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
-    section {
+    nav {
+      background-color: #111827;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    h1, h2 {
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2, h3 {
       color: #1f2937;
     }
-    .project {
+    .project, .blog-post {
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 1rem;
       margin-bottom: 1rem;
       background-color: white;
     }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1f2937;
-      color: white;
-    }
-    a {
-      color: #2563eb;
+    footer a {
+      color: #60a5fa;
     }
   </style>
 </head>
@@ -51,31 +63,79 @@
     <p>Email: <a href="mailto:evan.albury@outlook.com" style="color:#60a5fa">evan.albury@outlook.com</a></p>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a third-year Mechanical Engineering student at the University of Sheffield, passionate about motorsport and automotive engineering. I'm currently seeking an industrial placement for 2026/27 to apply my skills in CAD, CFD, and mechanical diagnostics in a real-world setting.</p>
-  </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog/Updates</a>
+    <a href="#cv">CV</a>
+  </nav>
 
-  <section id="projects">
-    <h2>Projects & Experience</h2>
-    <div class="project">
-      <h3>BSRC Race Mechanic Support</h3>
-      <p>Assisted at British Sports Racing Club events, working hands-on with race prep, setup, and mechanical troubleshooting.</p>
-    </div>
-    <div class="project">
-      <h3>Summer Internship – Astley Hire</h3>
-      <p>Worked as an Assistant Engineer repairing industrial equipment, including electric motors and hydraulic systems. Gained practical experience in diagnostics and component-level maintenance.</p>
-    </div>
-    <div class="project">
-      <h3>University Design Projects</h3>
-      <p>Participated in multiple team design projects focused on structural analysis, thermodynamic systems, and fluid dynamics. Experience in SolidWorks, CFD, and FEA simulations.</p>
-    </div>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a third-year Mechanical Engineering student at the University of Sheffield, passionate about motorsport, mechanical design, and applied engineering. I'm actively seeking a 2026/27 industrial placement to apply my knowledge of CAD, CFD, and mechanical diagnostics in a professional engineering environment.</p>
+    </section>
 
-  <section id="cv">
-    <h2>CV</h2>
-    <p><a href="Evan_CV.pdf" download>Download my CV</a></p>
-  </section>
+    <section id="projects">
+      <h2>Projects & Experience</h2>
+
+      <article class="project">
+        <h3>Bike Gearbox Design</h3>
+        <p>Developed a compact and efficient gearbox system for a single-speed bike using SolidWorks and gear ratio calculations. Optimized for smooth mechanical transmission and minimal weight.</p>
+      </article>
+
+      <article class="project">
+        <h3>Water Bottle Rocket Launcher</h3>
+        <p>Designed and built a launcher for compressed air-powered water bottle rockets. Integrated safety mechanisms, pressure regulation, and conducted launch tests to evaluate trajectory stability and thrust efficiency.</p>
+      </article>
+
+      <article class="project">
+        <h3>Summer Internship – Astley Hire</h3>
+        <p>Repaired and serviced industrial equipment including motors and hydraulic systems. Worked hands-on in diagnostics, maintenance, and parts replacement to improve machinery uptime and reliability.</p>
+      </article>
+
+      <article class="project">
+        <h3>BSRC Race Mechanic Support</h3>
+        <p>Supported teams at British Sports Racing Club events. Responsibilities included race prep, vehicle setup, and rapid diagnostics. Gained practical motorsport experience under time-critical conditions.</p>
+      </article>
+
+      <article class="project">
+        <h3>University Design Projects</h3>
+        <p>Involved in team-based projects covering thermofluids, structural analysis, and system simulation. Delivered FEA reports, CFD simulations, and prototypes using SolidWorks and ANSYS.</p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>CAD: SolidWorks, Autodesk Inventor</li>
+        <li>Simulation: ANSYS, SolidWorks Simulation (FEA & CFD)</li>
+        <li>Diagnostics: Mechanical fault detection, component testing</li>
+        <li>Fabrication: Basic machining, prototyping, 3D printing</li>
+        <li>Teamwork & Leadership: Group project management, pit crew collaboration</li>
+      </ul>
+    </section>
+
+    <section id="blog">
+      <h2>Blog / Updates</h2>
+
+      <article class="blog-post">
+        <h3>July 2025 – Preparing for Placement Applications</h3>
+        <p>I’ve started refining my portfolio and CV while applying to engineering placements for 2026/27. I’m targeting motorsport teams and automotive firms where I can apply my design and diagnostics experience.</p>
+      </article>
+
+      <article class="blog-post">
+        <h3>June 2025 – Completed Water Bottle Rocket Project</h3>
+        <p>This project was a blast (literally)! Great hands-on experience in pressure systems and launch dynamics. Looking to explore more fluid mechanics projects soon.</p>
+      </article>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p><a href="Evan_CV.pdf" download>Download my CV</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>Connect with me on <a href="https://www.linkedin.com/in/YOURPROFILE">LinkedIn</a></p>
