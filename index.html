@@ -64,6 +64,25 @@
     footer a {
       color: #60a5fa;
     }
+    .project-content, .blog-post-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-content img, .blog-post-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-content .text, .blog-post-content .text {
+  flex: 1;
+  min-width: 200px;
+}
   </style>
 </head>
 <body>
@@ -97,9 +116,13 @@
       </article>
 
       <article class="project">
-        <img src="Launcher_img.jpg" alt="Water Bottle Rocket Launcher Project Image" />
-        <h3>Water Bottle Rocket Launcher - First Year University</h3>
-        <p>Designed and built a launcher for compressed air-powered water bottle rockets. Integrated safety mechanisms, pressure regulation, and conducted launch tests to evaluate trajectory stability and thrust efficiency.</p>
+        <div class="project-content">
+          <img src="Launcher_img.jpg" alt="Water Bottle Rocket Launcher Project Image" />
+          <div class="text">
+            <h3>Water Bottle Rocket Launcher - First Year University</h3>
+            <p>Designed and built a launcher for compressed air-powered water bottle rockets. Integrated safety mechanisms, pressure regulation, and conducted launch tests to evaluate trajectory stability and thrust efficiency.</p>
+          </div>
+        </div>
       </article>
 
       <article class="project">
