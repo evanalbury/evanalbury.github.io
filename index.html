@@ -11,34 +11,37 @@
       padding: 0;
       background-color: #f8f9fa;
       color: #333;
-      line-height: 1.6;
     }
-    header {
+    header, footer {
       background-color: #1f2937;
       color: white;
-      padding: 2rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
     nav {
       background-color: #111827;
-      padding: 0.5rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
     nav a {
-      color: white;
-      margin: 0 1rem;
+      color: #60a5fa;
       text-decoration: none;
+      margin: 1rem;
       font-weight: bold;
     }
     nav a:hover {
-      color: #60a5fa;
+      text-decoration: underline;
     }
-    section {
+    main {
       padding: 2rem;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
-    h1, h2 {
+    section {
+      margin-bottom: 3rem;
+    }
+    h1, h2, h3 {
       color: #1f2937;
     }
     .project, .blog-post {
@@ -48,236 +51,209 @@
       margin-bottom: 1.5rem;
       background-color: white;
     }
-    .project-content, .blog-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      align-items: flex-start;
+    .project img, .blog-post img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
     }
-    .project-content img, .blog-content img {
-      width: 250px;
-      height: auto;
-      border-radius: 8px;
-      flex-shrink: 0;
+    ul {
+      padding-left: 1.5rem;
     }
-    .text {
-      flex: 1;
+    footer a {
+      color: #60a5fa;
     }
-    .toggle-btn {
-      background: none;
-      border: none;
-      color: #2563eb;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 0.5rem;
-      padding: 0;
-    }
-    .toggle-btn:hover {
-      text-decoration: underline;
-    }
-    .extra-details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
-      opacity: 0;
-    }
-    .extra-details.open {
-      max-height: 1000px;
-      opacity: 1;
-    }
-    .extra-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 0.5rem;
-    }
-    .extra-images img {
-      width: 120px;
-      height: auto;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #1f2937;
-      color: white;
-      margin-top: 2rem;
-    }
-    a {
-      color: #2563eb;
-    }
+    .project-content, .blog-post-content {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.project-content img, .blog-post-content img {
+  width: 300px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-content .text, .blog-post-content .text {
+  flex: 1;
+  min-width: 200px;
+}
   </style>
 </head>
 <body>
   <header>
     <h1>Evan Albury</h1>
-    <p>Mechanical Engineering Student | Motorsport Enthusiast</p>
+    <p>Mechanical Engineering Student at the University of Sheffield</p>
     <p>Email: <a href="mailto:evan.albury@outlook.com" style="color:#60a5fa">evan.albury@outlook.com</a></p>
   </header>
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#blog">Blog/Updates</a>
+    <a href="#cv">CV</a>
   </nav>
 
-  <section id="home">
-    <h2>Welcome</h2>
-    <p>Welcome to my engineering portfolio! Here you'll find my university projects, work experience, and personal engineering ventures, as well as updates on my latest work.</p>
-  </section>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a third-year Mechanical Engineering student at the University of Sheffield, passionate about motorsport, mechanical design, and applied engineering. I'm actively seeking a 2026/27 industrial placement to apply my knowledge and experience picked up throughout my degree and external endeavours in a professional engineering environment.</p>
+    </section>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a third-year Mechanical Engineering student at the University of Sheffield, passionate about motorsport and automotive engineering. I'm currently seeking an industrial placement for 2026/27 to apply my skills in CAD, CFD, and mechanical diagnostics in a real-world setting.</p>
-  </section>
+    <section id="projects">
+      <h2>Projects & Experience</h2>
 
-  <section id="projects">
-    <h2>Projects & Experience</h2>
+<article class="project">
+  <div class="project-content">
+    <img src="MEC45_img.JPG" alt="Bike Gearbox Project Image" />
+    <div class="text">
+      <h3>Bike Gearbox Design - Second Year University</h3>
+      <p>Developed a gearbox for an EAPC for transmitting power from an electric motor to the rear wheel.</p>
 
-    <article class="project">
-      <div class="project-content">
-        <img src="MEC45_img.JPG" alt="Bike Gearbox Project">
-        <div class="text">
-          <h3>Bike Gearbox Design</h3>
-          <p>Developed a gearbox for an EAPC for transmitting power from an electric motor to the rear wheel. This project shifted my skills into high gear.</p>
-          <button class="toggle-btn">More Details ▼</button>
-          <div class="extra-details">
-            <p>Designed gear ratios, performed FEA, and optimised weight using Fusion360. Produced a functional prototype tested under load conditions.</p>
-            <div class="extra-images">
-              <img src="gearbox_closeup.jpg" alt="Gearbox CAD Model">
-              <img src="gearbox_test.jpg" alt="Gearbox Testing">
-            </div>
-          </div>
+      <button class="toggle-btn">More Details ▼</button>
+
+      <div class="extra-details">
+        <p>
+          This project started out with calculating the gear ratio we needed given the power of our motor and to abide by uk law. After that we came up with many methods of achieving this ratio, this included belt drives, 2 step, 3 step and planetary gearboxes. In the end we all agreed that a 2 step gearbox was the best way to go forward
+          Once we had our general concept decided on we began to work on the details such as the optimal module and thickness for the gears. We designed multiple CAD models and then ran simulations on these to come up with what we thought was the best solution.
+        </p>
+        <p>
+          Now that we had our first design it was time to move onto prototyping. This involved manufacturing our gearbox, mostly through laser cutting and some quick assembly. We ran our prototype 2 weeks before our final test and found that as the motor reached higher speeds the gear connected to the freewheel sheared off the shaft. While we were somewhat dissapointed it helped us greatly in deciding our next steps as in our final design we added bolts to clamp the gears onto the shaft, in addition to just the glue which was originally all we had used. After some other small adjustments we manufactured our final design and were ready to move onto the final test.
+        </p>
+        <p>
+          The final test had mixed results. We were marked in three categories: Material used, Distance travelled and fitting time. Due to our compact 2 step design we scored well on the material used (only using 2 of the 6 available acrylic sheets) and some additional design elements we had incorporated meant we also scored excellently on the fitting time getting within the top 10%. We also scored a top 10% on the distance travelled however due to a small design constraint that we had missed we were capped at 40% marks. The design element was that there were some small external nuts rotating on the gearbox and while we had covered up the motor we had missed these nuts. This was a shame but we all came away with a great overall score and felt very happy with what we had learnt and achieved throughout the project.
+        </p>
+        <div class="extra-images">
+          <img src="gearbox_closeup.jpg" alt="Gearbox CAD Model">
+          <img src="gearbox_test.jpg" alt="Gearbox Testing">
         </div>
       </div>
-    </article>
+    </div>
+  </div>
+</article>
+      
+<article class="project">
+  <div class="project-content">
+    <img src="Launcher_img.jpg" alt="Water Bottle Rocket Launcher Project Image" />
+    <div class="text">
+      <h3>Water Bottle Rocket Launcher - First Year University</h3>
+            <p>Designed and built a launcher for compressed air-powered water bottle rockets. Integrated safety mechanisms, pressure regulation, and conducted launch tests to evaluate trajectory stability and thrust efficiency.</p>
 
-    <article class="project">
-      <div class="project-content">
-        <img src="rocket_img.JPG" alt="Water Bottle Rocket Launcher">
-        <div class="text">
-          <h3>Water Bottle Rocket Launcher</h3>
-          <p>Designed and built a launcher capable of firing a pressurised water bottle rocket. This project was a blast.</p>
-          <button class="toggle-btn">More Details ▼</button>
-          <div class="extra-details">
-            <p>Applied fluid dynamics and pressure vessel calculations to design a safe and repeatable launcher system.</p>
-            <div class="extra-images">
-              <img src="launcher_build.jpg" alt="Rocket Launcher Build">
-              <img src="launcher_test.jpg" alt="Launcher Testing">
-            </div>
-          </div>
+      <button class="toggle-btn">More Details ▼</button>
+
+      <div class="extra-details">
+        <p>
+          This project involved engineering the gear ratios and performing analysis on all components 
+          to optimise for weight and speed. Used Fusion360 for CAD, FEA to validate strength, and 
+          created a working prototype.
+        </p>
+        <div class="extra-images">
+          <img src="gearbox_closeup.jpg" alt="Gearbox CAD Model">
+          <img src="gearbox_test.jpg" alt="Gearbox Testing">
         </div>
       </div>
-    </article>
+    </div>
+  </div>
+</article>
+      
+<article class="project">
+  <div class="project-content">
+    <img src="Astley_Hire_img.JPG" alt="Astley Hire Internship Image" />
+    <div class="text">
+      <h3>Summer Internship – Astley Hire</h3>
+        <p>Repaired and serviced industrial equipment, including motors and hydraulic systems. Worked hands-on in diagnostics, maintenance, and parts replacement to improve machinery reliability and ensure everything was to the correct standard.</p>
 
-    <article class="project">
-      <div class="project-content">
-        <img src="astley_img.JPG" alt="Astley Hire Internship">
-        <div class="text">
-          <h3>Summer Internship – Astley Hire</h3>
-          <p>Worked as an Assistant Engineer repairing industrial equipment — an experience that really kept the wheels turning.</p>
-          <button class="toggle-btn">More Details ▼</button>
-          <div class="extra-details">
-            <p>Carried out diagnostics and repairs on electric motors, hydraulic systems, and industrial tools. Gained practical experience in component-level maintenance.</p>
-            <div class="extra-images">
-              <img src="astley_motor.jpg" alt="Motor Repair">
-              <img src="astley_hydraulic.jpg" alt="Hydraulic System Maintenance">
-            </div>
-          </div>
+      <button class="toggle-btn">More Details ▼</button>
+
+      <div class="extra-details">
+        <p>
+          This project involved engineering the gear ratios and performing analysis on all components 
+          to optimise for weight and speed. Used Fusion360 for CAD, FEA to validate strength, and 
+          created a working prototype.
+        </p>
+        <div class="extra-images">
+          <img src="gearbox_closeup.jpg" alt="Gearbox CAD Model">
+          <img src="gearbox_test.jpg" alt="Gearbox Testing">
         </div>
       </div>
-    </article>
+    </div>
+  </div>
+</article>
+      
+<article class="project">
+  <div class="project-content">
+    <img src="Kart_img.jpg" alt="BSRC Trackside Support Image" />
+          <div class="text">
+        <h3>BSRC Race Mechanic Support</h3>
+        <p>Supported a karting team at British Sports Racing Club events. Responsibilities included race prep, vehicle setup, and completing mid-session pit stops. Gained practical motorsport experience under time-critical conditions.</p>
 
-    <article class="project">
-      <div class="project-content">
-        <img src="bsrc_img.JPG" alt="BSRC Race Mechanic Support">
-        <div class="text">
-          <h3>BSRC Race Mechanic Support</h3>
-          <p>Assisted at British Sports Racing Club events, getting cars race-ready and ensuring peak performance on track.</p>
-          <button class="toggle-btn">More Details ▼</button>
-          <div class="extra-details">
-            <p>Supported pit crew operations, handled mechanical troubleshooting, and contributed to pre-race inspections.</p>
-            <div class="extra-images">
-              <img src="bsrc_prep.jpg" alt="Race Car Prep">
-              <img src="bsrc_track.jpg" alt="BSRC Track Event">
-            </div>
-          </div>
+      <button class="toggle-btn">More Details ▼</button>
+
+      <div class="extra-details">
+        <p>
+          This project involved engineering the gear ratios and performing analysis on all components 
+          to optimise for weight and speed. Used Fusion360 for CAD, FEA to validate strength, and 
+          created a working prototype.
+        </p>
+        <div class="extra-images">
+          <img src="gearbox_closeup.jpg" alt="Gearbox CAD Model">
+          <img src="gearbox_test.jpg" alt="Gearbox Testing">
         </div>
       </div>
-    </article>
-  </section>
+    </div>
+  </div>
+</article>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>CAD Design (SolidWorks, Fusion360)</li>
-      <li>FEA & CFD Analysis</li>
-      <li>Mechanical Diagnostics & Maintenance</li>
-      <li>Motorsport Pit Crew Experience</li>
-      <li>Prototyping & Fabrication</li>
-    </ul>
-  </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>CAD: Fusion360</li>
+        <li>Simulation: ANSYS, Fusion360 simulation (FEA & CFD)</li>
+        <li>Diagnostics: Mechanical fault detection, component testing</li>
+        <li>Fabrication: Basic machining, prototyping, 3D printing</li>
+        <li>Teamwork & Leadership: Group project management & teamwork, pit crew collaboration, Engineering team at Astley Hire</li>
+      </ul>
+    </section>
 
-  <section id="blog">
-    <h2>Blog / Updates</h2>
+    <section id="blog">
+      <h2>Blog / Updates</h2>
 
-    <article class="blog-post">
-      <div class="blog-content">
-        <img src="blog_placeholder.jpg" alt="Blog Update Image">
-        <div class="text">
-          <h3>Latest Update</h3>
-          <p>Started work on optimising my gearbox prototype after initial testing feedback.</p>
-          <button class="toggle-btn">Read More ▼</button>
-          <div class="extra-details">
-            <p>Working on improving efficiency by modifying the tooth profile and reducing internal friction.</p>
-            <div class="extra-images">
-              <img src="gearbox_update.jpg" alt="Gearbox Update Image">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <article class="blog-post">
+        <h3>July 2025 – Preparing for Placement Applications</h3>
+        <p>I’ve started refining my portfolio and CV while applying to engineering placements for 2026/27. I’m targeting firms that reflect my passions and where I can really apply my knowledge of CAD and CFD software.</p>
+      </article>
 
-    <article class="blog-post">
-      <div class="blog-content">
-        <img src="blog_placeholder2.jpg" alt="Blog Update Image">
-        <div class="text">
-          <h3>BSRC Race Weekend</h3>
-          <p>Completed another race weekend at BSRC with great team results.</p>
-          <button class="toggle-btn">Read More ▼</button>
-          <div class="extra-details">
-            <p>Worked on suspension adjustments, brake checks, and tyre pressure optimisation.</p>
-            <div class="extra-images">
-              <img src="bsrc_update.jpg" alt="BSRC Update Image">
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+      <article class="blog-post">
+        <h3>May 2025 – Completed Gearbox Project</h3>
+        <p>This project has very much helped me gear up for reality. Such great experience gained in CAD, simulation and engineering design. Really looking forward to future designs</p>
+      </article>
+      
+      <article class="blog-post">
+        <h3>June 2024 – Started work at Astley Hire</h3>
+        <p>Really looking forward to working alongside other engineers in a professional environment and picking up as much experience as I can in the process.</p>
+      </article>
+      
+      <article class="blog-post">
+        <h3>May 2024 – Completed Water Bottle Rocket Project</h3>
+        <p>This project was a blast (literally)! Great hands-on experience in pressure systems and launch dynamics. Looking to explore more fluid mechanics projects soon.</p>
+      </article>
+    </section>
 
-  </section>
+    <section id="cv">
+      <h2>CV</h2>
+      <p><a href="Evan_CV.pdf" download>Download my CV</a></p>
+    </section>
+  </main>
 
   <footer>
-    <p>Connect with me on <a href="https://www.linkedin.com/in/YOURPROFILE">LinkedIn</a></p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/evan-albury-9013k7/">LinkedIn</a></p>
     <p>&copy; 2025 Evan Albury</p>
   </footer>
-
-  <script>
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const details = button.nextElementSibling;
-        details.classList.toggle('open');
-
-        if (details.classList.contains('open')) {
-          button.textContent = button.textContent.replace('More', 'Less').replace('Read', 'Hide').replace('▼', '▲');
-        } else {
-          button.textContent = button.textContent.replace('Less', 'More').replace('Hide', 'Read').replace('▲', '▼');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
